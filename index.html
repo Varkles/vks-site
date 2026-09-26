@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VKS — Não é só roupa. É quem você é.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#inicio">VKS</a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#loja">Loja</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-actions">
+      <button aria-label="Buscar">⌕</button>
+      <button aria-label="Conta">♙</button>
+      <button class="cart-btn" aria-label="Carrinho">◱ <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">VKS / STREETWEAR</p>
+        <h1>NÃO É SÓ ROUPA.<br><span>É QUEM VOCÊ É.</span></h1>
+        <p class="hero-copy">A VKS nasceu para transformar atitude em peças.</p>
+        <a href="#loja" class="button">VER COLEÇÃO <span>→</span></a>
+      </div>
+      <div class="hero-meta"><span>01</span><span>02</span><span>03</span></div>
+    </section>
+
+    <section class="category-grid">
+      <a href="#loja" class="category-card"><div class="fake-product shirt"></div><h3>CAMISETAS</h3><span>VER COLEÇÃO →</span></a>
+      <a href="#loja" class="category-card"><div class="fake-product shoe"></div><h3>TÊNIS</h3><span>EM BREVE</span></a>
+      <a href="#loja" class="category-card"><div class="fake-product cap"></div><h3>ACESSÓRIOS</h3><span>EM BREVE</span></a>
+    </section>
+
+    <section class="manifesto-banner">
+      <div>
+        <div class="mini-logo">VKS</div>
+        <h2>DO STREET<br>PARA O MUNDO.</h2>
+      </div>
+    </section>
+
+    <section id="loja" class="shop section">
+      <div class="section-head">
+        <div><p class="eyebrow">VKS / SHOP</p><h2>LOJA</h2></div>
+        <select id="sort">
+          <option>Ordenar por: Mais recentes</option>
+          <option>Menor preço</option>
+          <option>Maior preço</option>
+        </select>
+      </div>
+
+      <div class="filters">
+        <button class="active">Todos</button><button>Camisetas</button><button>Tênis</button><button>Acessórios</button>
+      </div>
+
+      <div class="products" id="products"></div>
+    </section>
+
+    <section id="sobre" class="about section">
+      <div class="about-copy">
+        <p class="eyebrow">A IDENTIDADE</p>
+        <h2>SOBRE A VKS</h2>
+        <p>A VKS nasceu com uma ideia simples: transformar atitude em peças que representam quem veste.</p>
+        <p>Mais que uma marca de roupa, somos movimento. Representamos quem corre atrás, quem não desiste, quem faz do seu jeito.</p>
+        <a href="#loja" class="button light">CONHEÇA A COLEÇÃO →</a>
+      </div>
+      <div class="about-art"><span>VKS</span></div>
+    </section>
+
+    <section class="values section">
+      <article><b>✦</b><h3>LIBERDADE</h3><p>Para vestir do seu jeito.</p></article>
+      <article><b>◇</b><h3>RESPEITO</h3><p>Por quem está na caminhada.</p></article>
+      <article><b>◎</b><h3>EVOLUÇÃO</h3><p>Sempre buscando mais.</p></article>
+      <article><b>VKS</b><h3>PARA O MUNDO</h3><p>Uma identidade em movimento.</p></article>
+    </section>
+
+    <section id="contato" class="newsletter">
+      <p class="eyebrow">FAÇA PARTE</p>
+      <h2>ACOMPANHE A VKS</h2>
+      <p>Novos lançamentos, bastidores e conteúdo exclusivo.</p>
+      <div class="socials"><a href="#">Instagram</a><a href="#">TikTok</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">VKS</div>
+    <div><a href="#inicio">Início</a><a href="#loja">Loja</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div>
+    <p>© 2026 VKS. Todos os direitos reservados.</p>
+  </footer>
+
+  <aside id="cart" class="cart">
+    <div class="cart-head"><h2>CARRINHO</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"><p>Seu carrinho está vazio.</p></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+    <button class="button full">FINALIZAR COMPRA</button>
+  </aside>
+  <div id="backdrop"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
