@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Conta — VKS</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="conta-header">
+
+    <a
+        href="index.html"
+        class="voltar"
+    >
+        ← VOLTAR
+    </a>
+
+
+    <a href="index.html">
+
+        <img
+            src="logo.png"
+            alt="VKS"
+            class="logo-produto"
+        >
+
+    </a>
+
+</header>
+
+
+
+<main class="conta-page">
+
+
+    <!-- =========================
+         LOGIN
+    ========================== -->
+
+    <section
+        id="loginBox"
+        class="conta-box"
+    >
+
+        <p class="conta-label">
+            VKS / ACCOUNT
+        </p>
+
+
+        <h1>
+            ENTRAR
+        </h1>
+
+
+        <p class="conta-subtitulo">
+            Entre na sua conta VKS.
+        </p>
+
+
+
+        <form id="loginForm">
+
+
+            <label>
+                E-MAIL
+            </label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="seu@email.com"
+                autocomplete="email"
+                required
+            >
+
+
+
+            <label>
+                SENHA
+            </label>
+
+            <input
+                type="password"
+                id="loginSenha"
+                placeholder="Sua senha"
+                autocomplete="current-password"
+                required
+            >
+
+
+
+            <button
+                type="submit"
+                class="conta-button"
+            >
+                ENTRAR →
+            </button>
+
+
+        </form>
+
+
+
+        <p
+            id="loginMensagem"
+            class="conta-mensagem"
+        ></p>
+
+
+
+        <div class="trocar-conta">
+
+            <span>
+                Ainda não tem uma conta?
+            </span>
+
+
+            <button
+                type="button"
+                id="mostrarCadastro"
+            >
+                CRIAR CONTA
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =========================
+         CADASTRO
+    ========================== -->
+
+    <section
+        id="cadastroBox"
+        class="conta-box"
+        style="display:none;"
+    >
+
+        <p class="conta-label">
+            VKS / ACCOUNT
+        </p>
+
+
+        <h1>
+            CRIAR CONTA
+        </h1>
+
+
+        <p class="conta-subtitulo">
+            Faça parte da VKS.
+        </p>
+
+
+
+        <form id="cadastroForm">
+
+
+            <label>
+                NOME
+            </label>
+
+            <input
+                type="text"
+                id="cadastroNome"
+                placeholder="Seu nome"
+                autocomplete="name"
+                required
+            >
+
+
+
+            <label>
+                E-MAIL
+            </label>
+
+            <input
+                type="email"
+                id="cadastroEmail"
+                placeholder="seu@email.com"
+                autocomplete="email"
+                required
+            >
+
+
+
+            <label>
+                SENHA
+            </label>
+
+            <input
+                type="password"
+                id="cadastroSenha"
+                placeholder="Mínimo de 6 caracteres"
+                autocomplete="new-password"
+                minlength="6"
+                required
+            >
+
+
+
+            <label>
+                CONFIRMAR SENHA
+            </label>
+
+            <input
+                type="password"
+                id="confirmarSenha"
+                placeholder="Digite a senha novamente"
+                autocomplete="new-password"
+                minlength="6"
+                required
+            >
+
+
+
+            <button
+                type="submit"
+                class="conta-button"
+            >
+                CRIAR CONTA →
+            </button>
+
+
+        </form>
+
+
+
+        <p
+            id="cadastroMensagem"
+            class="conta-mensagem"
+        ></p>
+
+
+
+        <div class="trocar-conta">
+
+            <span>
+                Já possui uma conta?
+            </span>
+
+
+            <button
+                type="button"
+                id="mostrarLogin"
+            >
+                ENTRAR
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =========================
+         CONTA LOGADA
+    ========================== -->
+
+    <section
+        id="perfilBox"
+        class="conta-box perfil-box"
+        style="display:none;"
+    >
+
+        <p class="conta-label">
+            VKS / ACCOUNT
+        </p>
+
+
+        <h1>
+            MINHA CONTA
+        </h1>
+
+
+        <div class="perfil">
+
+            <div class="perfil-avatar">
+                VKS
+            </div>
+
+
+            <div>
+
+                <span>
+                    OLÁ,
+                </span>
+
+                <h2 id="perfilNome">
+                    Usuário
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="perfil-info">
+
+
+            <div>
+
+                <span>
+                    E-MAIL
+                </span>
+
+                <strong id="perfilEmail">
+                    -
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    CONTA
+                </span>
+
+                <strong>
+                    VKS MEMBER
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="perfil-links">
+
+
+            <a href="colecao.html">
+                VER COLEÇÃO →
+            </a>
+
+
+            <a href="checkout.html">
+                MEUS PEDIDOS →
+            </a>
+
+
+        </div>
+
+
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button"
+        >
+            SAIR DA CONTA
+        </button>
+
+
+        <p
+            id="perfilMensagem"
+            class="conta-mensagem"
+        ></p>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+        VKS
+    </div>
+
+    <p>
+        © 2026 VKS. Todos os direitos reservados.
+    </p>
+
+</footer>
+
+
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script>
+
+
+// ===============================
+// SUPABASE
+// ===============================
+
+const SUPABASE_URL =
+    "https://yqtkkbaowvydpyplzntc.supabase.co";
+
+
+const SUPABASE_KEY =
+    "sb_publishable_D966GnFEZ3jCChkP9d9YyA_BbdKDUnY";
+
+
+const supabaseClient =
+    supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
+
+
+
+// ===============================
+// ELEMENTOS
+// ===============================
+
+const loginBox =
+    document.getElementById(
+        "loginBox"
+    );
+
+
+const cadastroBox =
+    document.getElementById(
+        "cadastroBox"
+    );
+
+
+const perfilBox =
+    document.getElementById(
+        "perfilBox"
+    );
+
+
+
+// ===============================
+// TROCAR LOGIN / CADASTRO
+// ===============================
+
+document
+    .getElementById("mostrarCadastro")
+    .addEventListener(
+        "click",
+        () => {
+
+            loginBox.style.display =
+                "none";
+
+            cadastroBox.style.display =
+                "block";
+
+        }
+    );
+
+
+
+document
+    .getElementById("mostrarLogin")
+    .addEventListener(
+        "click",
+        () => {
+
+            cadastroBox.style.display =
+                "none";
+
+            loginBox.style.display =
+                "block";
+
+        }
+    );
+
+
+
+// ===============================
+// CADASTRAR
+// ===============================
+
+document
+    .getElementById("cadastroForm")
+    .addEventListener(
+        "submit",
+        async event => {
+
+            event.preventDefault();
+
+
+            const nome =
+                document
+                    .getElementById(
+                        "cadastroNome"
+                    )
+                    .value
+                    .trim();
+
+
+            const email =
+                document
+                    .getElementById(
+                        "cadastroEmail"
+                    )
+                    .value
+                    .trim();
+
+
+            const senha =
+                document
+                    .getElementById(
+                        "cadastroSenha"
+                    )
+                    .value;
+
+
+            const confirmar =
+                document
+                    .getElementById(
+                        "confirmarSenha"
+                    )
+                    .value;
+
+
+            const mensagem =
+                document.getElementById(
+                    "cadastroMensagem"
+                );
+
+
+
+            // =========================
+            // VALIDAR SENHA
+            // =========================
+
+            if (senha !== confirmar) {
+
+                mensagem.textContent =
+                    "As senhas não são iguais.";
+
+                mensagem.className =
+                    "conta-mensagem erro";
+
+                return;
+
+            }
+
+
+
+            if (senha.length < 6) {
+
+                mensagem.textContent =
+                    "A senha precisa ter pelo menos 6 caracteres.";
+
+                mensagem.className =
+                    "conta-mensagem erro";
+
+                return;
+
+            }
+
+
+
+            mensagem.textContent =
+                "Criando sua conta...";
+
+            mensagem.className =
+                "conta-mensagem";
+
+
+
+            try {
+
+
+                const {
+                    data,
+                    error
+                } =
+                    await supabaseClient.auth
+                        .signUp({
+
+                            email: email,
+
+                            password: senha,
+
+                            options: {
+
+                                data: {
+                                    nome: nome
+                                }
+
+                            }
+
+                        });
+
+
+
+                if (error) {
+                    throw error;
+                }
+
+
+
+                // =========================
+                // CRIAR PERFIL
+                // =========================
+
+                if (data.user) {
+
+
+                    const {
+                        error:
+                        profileError
+                    } =
+                        await supabaseClient
+                            .from("profiles")
+                            .insert({
+
+                                id:
+                                    data.user.id,
+
+                                nome:
+                                    nome
+
+                            });
+
+
+
+                    if (profileError) {
+
+                        console.error(
+                            profileError
+                        );
+
+                    }
+
+                }
+
+
+
+                // =========================
+                // SUCESSO
+                // =========================
+
+                mensagem.textContent =
+                    "Conta criada! Verifique seu e-mail para confirmar.";
+
+                mensagem.className =
+                    "conta-mensagem sucesso";
+
+
+
+            } catch (error) {
+
+
+                console.error(error);
+
+
+                mensagem.textContent =
+                    error.message ||
+                    "Não foi possível criar a conta.";
+
+
+                mensagem.className =
+                    "conta-mensagem erro";
+
+            }
+
+        }
+    );
+
+
+
+// ===============================
+// LOGIN
+// ===============================
+
+document
+    .getElementById("loginForm")
+    .addEventListener(
+        "submit",
+        async event => {
+
+            event.preventDefault();
+
+
+            const email =
+                document
+                    .getElementById(
+                        "loginEmail"
+                    )
+                    .value
+                    .trim();
+
+
+            const senha =
+                document
+                    .getElementById(
+                        "loginSenha"
+                    )
+                    .value;
+
+
+            const mensagem =
+                document.getElementById(
+                    "loginMensagem"
+                );
+
+
+            mensagem.textContent =
+                "Entrando...";
+
+            mensagem.className =
+                "conta-mensagem";
+
+
+
+            try {
+
+
+                const {
+                    data,
+                    error
+                } =
+                    await supabaseClient.auth
+                        .signInWithPassword({
+
+                            email: email,
+
+                            password: senha
+
+                        });
+
+
+
+                if (error) {
+                    throw error;
+                }
+
+
+
+                mensagem.textContent =
+                    "Login realizado!";
+
+                mensagem.className =
+                    "conta-mensagem sucesso";
+
+
+
+                mostrarPerfil(
+                    data.user
+                );
+
+
+            } catch (error) {
+
+
+                console.error(error);
+
+
+                mensagem.textContent =
+                    "E-mail ou senha incorretos.";
+
+                mensagem.className =
+                    "conta-mensagem erro";
+
+            }
+
+        }
+    );
+
+
+
+// ===============================
+// MOSTRAR PERFIL
+// ===============================
+
+async function mostrarPerfil(user) {
+
+
+    if (!user) return;
+
+
+    loginBox.style.display =
+        "none";
+
+
+    cadastroBox.style.display =
+        "none";
+
+
+    perfilBox.style.display =
+        "block";
+
+
+
+    const perfilNome =
+        document.getElementById(
+            "perfilNome"
+        );
+
+
+    const perfilEmail =
+        document.getElementById(
+            "perfilEmail"
+        );
+
+
+
+    let nome =
+        user.user_metadata?.nome ||
+        "Membro VKS";
+
+
+
+    // =========================
+    // TENTAR PEGAR DO PERFIL
+    // =========================
+
+    const {
+        data: perfil
+    } =
+        await supabaseClient
+            .from("profiles")
+            .select("nome")
+            .eq("id", user.id)
+            .single();
+
+
+
+    if (
+        perfil &&
+        perfil.nome
+    ) {
+
+        nome =
+            perfil.nome;
+
+    }
+
+
+
+    perfilNome.textContent =
+        nome;
+
+
+    perfilEmail.textContent =
+        user.email || "-";
+
+}
+
+
+
+// ===============================
+// LOGOUT
+// ===============================
+
+document
+    .getElementById("logoutButton")
+    .addEventListener(
+        "click",
+        async () => {
+
+
+            const {
+                error
+            } =
+                await supabaseClient
+                    .auth.signOut();
+
+
+
+            if (error) {
+
+                console.error(
+                    error
+                );
+
+                return;
+
+            }
+
+
+
+            perfilBox.style.display =
+                "none";
+
+
+            loginBox.style.display =
+                "block";
+
+
+            document
+                .getElementById(
+                    "loginMensagem"
+                )
+                .textContent =
+                "Você saiu da sua conta.";
+
+        }
+    );
+
+
+
+// ===============================
+// VERIFICAR SESSÃO
+// ===============================
+
+async function verificarSessao() {
+
+
+    const {
+        data
+    } =
+        await supabaseClient.auth
+            .getSession();
+
+
+
+    if (
+        data.session &&
+        data.session.user
+    ) {
+
+        mostrarPerfil(
+            data.session.user
+        );
+
+    }
+
+}
+
+
+
+verificarSessao();
+
+
+
+// ===============================
+// OBSERVAR ALTERAÇÕES
+// ===============================
+
+supabaseClient.auth
+    .onAuthStateChange(
+        (event, session) => {
+
+            if (
+                event ===
+                "SIGNED_OUT"
+            ) {
+
+                perfilBox.style.display =
+                    "none";
+
+                loginBox.style.display =
+                    "block";
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

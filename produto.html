@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Produto — VKS</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="produto-header">
+
+    <a
+        href="colecao.html"
+        class="voltar"
+    >
+        ← VOLTAR
+    </a>
+
+
+    <a href="index.html">
+
+        <img
+            src="logo.png"
+            alt="VKS"
+            class="logo-produto"
+        >
+
+    </a>
+
+</header>
+
+
+
+<main class="pagina-produto">
+
+
+    <div class="produto-imagem">
+
+        <img
+            id="produtoImagem"
+            src=""
+            alt="Produto VKS"
+        >
+
+    </div>
+
+
+
+    <div class="produto-info">
+
+        <span class="produto-marca">
+            VKS / VARKLES
+        </span>
+
+
+        <h1 id="produtoNome">
+            Produto
+        </h1>
+
+
+        <div
+            class="produto-preco"
+            id="produtoPreco"
+        >
+            R$ 0,00
+        </div>
+
+
+        <p class="produto-descricao">
+
+            Uma peça VKS criada para representar
+            atitude, identidade e liberdade.
+
+            <br><br>
+
+            NÃO É SÓ ROUPA.
+            É QUEM VOCÊ É.
+
+        </p>
+
+
+
+        <div class="tamanhos">
+
+            <p>
+                ESCOLHA O TAMANHO
+            </p>
+
+
+            <div class="tamanho-opcoes">
+
+                <button type="button" data-size="P">
+                    P
+                </button>
+
+                <button type="button" data-size="M">
+                    M
+                </button>
+
+                <button type="button" data-size="G">
+                    G
+                </button>
+
+                <button type="button" data-size="GG">
+                    GG
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <button
+            class="comprar"
+            id="comprar"
+            type="button"
+        >
+            ADICIONAR AO CARRINHO
+        </button>
+
+
+        <p
+            id="avisoTamanho"
+            class="aviso-tamanho"
+        >
+            Selecione um tamanho antes de continuar.
+        </p>
+
+    </div>
+
+</main>
+
+
+
+<script>
+
+const products = [
+
+    {
+        name: "Camiseta VKS Logo (Preta)",
+        price: 129.90,
+        image: "camiseta-logo-preta.png"
+    },
+
+    {
+        name: "Camiseta VKS Logo (Branca)",
+        price: 129.90,
+        image: "camiseta-logo-branca.png"
+    },
+
+    {
+        name: "Camiseta VKS Back (Preta)",
+        price: 149.90,
+        image: "camiseta-back-preta.png"
+    },
+
+    {
+        name: "Camiseta VKS Stone (Cinza)",
+        price: 139.90,
+        image: "camiseta-stone-cinza.png"
+    },
+
+    {
+        name: "Boné VKS",
+        price: 99.90,
+        image: "bone-vks.png"
+    },
+
+    {
+        name: "Touca VKS",
+        price: 79.90,
+        image: "touca-vks.png"
+    }
+
+];
+
+
+const params =
+    new URLSearchParams(window.location.search);
+
+const id =
+    Number(params.get("id"));
+
+const produto =
+    products[id];
+
+
+if (produto) {
+
+    document.getElementById("produtoImagem").src =
+        produto.image;
+
+    document.getElementById("produtoImagem").alt =
+        produto.name;
+
+    document.getElementById("produtoNome").textContent =
+        produto.name;
+
+    document.getElementById("produtoPreco").textContent =
+        produto.price.toLocaleString(
+            "pt-BR",
+            {
+                style: "currency",
+                currency: "BRL"
+            }
+        );
+
+    document.title =
+        produto.name + " — VKS";
+
+}
+
+
+
+let tamanhoSelecionado = null;
+
+
+const botoes =
+    document.querySelectorAll(
+        ".tamanho-opcoes button"
+    );
+
+
+botoes.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        botoes.forEach(b => {
+
+            b.classList.remove(
+                "selecionado"
+            );
+
+        });
+
+
+        botao.classList.add(
+            "selecionado"
+        );
+
+
+        tamanhoSelecionado =
+            botao.dataset.size;
+
+
+        document.getElementById(
+            "avisoTamanho"
+        ).style.display = "none";
+
+    });
+
+});
+
+
+
+document.getElementById(
+    "comprar"
+).addEventListener(
+    "click",
+    () => {
+
+        if (!tamanhoSelecionado) {
+
+            document.getElementById(
+                "avisoTamanho"
+            ).style.display = "block";
+
+            return;
+
+        }
+
+
+        const carrinho =
+            JSON.parse(
+                localStorage.getItem("vksCarrinho")
+            ) || [];
+
+
+        carrinho.push({
+
+    name: produto.name,
+
+    price: produto.price,
+
+    image: produto.image,
+
+    size: tamanhoSelecionado,
+
+    quantity: 1
+
+});
+
+
+        localStorage.setItem(
+            "vksCarrinho",
+            JSON.stringify(carrinho)
+        );
+
+
+        alert(
+            "Produto adicionado ao carrinho!"
+        );
+
+
+        window.location.href =
+            "index.html";
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

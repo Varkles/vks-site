@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Finalizar pedido — VKS</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="checkout-header">
+
+    <a
+        href="colecao.html"
+        class="voltar"
+    >
+        ← VOLTAR
+    </a>
+
+
+    <a href="index.html">
+
+        <img
+            src="logo.png"
+            alt="VKS"
+            class="logo-produto"
+        >
+
+    </a>
+
+</header>
+
+
+
+<main class="checkout">
+
+
+    <div class="checkout-title">
+
+        <p>VKS / VARKLES</p>
+
+        <h1>FINALIZAR PEDIDO</h1>
+
+        <span>
+            NÃO É SÓ ROUPA, É QUEM VOCÊ É.
+        </span>
+
+    </div>
+
+
+
+    <div class="checkout-grid">
+
+
+        <!-- =========================
+             DADOS DO CLIENTE
+        ========================== -->
+
+        <section class="checkout-box">
+
+            <p class="checkout-label">
+                01 / SEUS DADOS
+            </p>
+
+
+            <h2>
+                INFORMAÇÕES
+            </h2>
+
+
+            <label>
+                NOME
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome"
+                autocomplete="name"
+            >
+
+
+            <label>
+                CEP
+            </label>
+
+            <input
+                type="text"
+                id="cep"
+                placeholder="00000-000"
+                maxlength="9"
+                inputmode="numeric"
+                autocomplete="postal-code"
+            >
+
+            <p
+                id="cepStatus"
+                class="cep-status"
+            ></p>
+
+
+            <label>
+                CIDADE
+            </label>
+
+            <input
+                type="text"
+                id="cidade"
+                placeholder="Sua cidade"
+                autocomplete="address-level2"
+            >
+
+
+            <label>
+                ESTADO
+            </label>
+
+            <input
+                type="text"
+                id="estado"
+                placeholder="SC"
+                maxlength="2"
+                autocomplete="address-level1"
+            >
+
+
+            <label>
+                ENDEREÇO
+            </label>
+
+            <input
+                type="text"
+                id="endereco"
+                placeholder="Rua, número, bairro..."
+                autocomplete="street-address"
+            >
+
+
+
+            <!-- =========================
+                 ENTREGA
+            ========================== -->
+
+            <div class="checkout-subsection">
+
+                <p class="checkout-label">
+                    02 / ENTREGA
+                </p>
+
+
+                <h2>
+                    FRETE
+                </h2>
+
+
+                <div class="shipping-options">
+
+
+                    <label class="shipping-option">
+
+                        <input
+                            type="radio"
+                            name="frete"
+                            value="10"
+                            data-name="Entrega local"
+                        >
+
+                        <div>
+
+                            <strong>
+                                ENTREGA LOCAL
+                            </strong>
+
+                            <small>
+                                Prazo a combinar
+                            </small>
+
+                        </div>
+
+                        <span>
+                            R$ 10,00
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="shipping-option">
+
+                        <input
+                            type="radio"
+                            name="frete"
+                            value="25"
+                            data-name="Envio"
+                        >
+
+                        <div>
+
+                            <strong>
+                                ENVIO
+                            </strong>
+
+                            <small>
+                                Prazo conforme transportadora
+                            </small>
+
+                        </div>
+
+                        <span>
+                            R$ 25,00
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="shipping-option">
+
+                        <input
+                            type="radio"
+                            name="frete"
+                            value="0"
+                            data-name="Retirada"
+                        >
+
+                        <div>
+
+                            <strong>
+                                RETIRADA
+                            </strong>
+
+                            <small>
+                                Combine a retirada
+                            </small>
+
+                        </div>
+
+                        <span>
+                            GRÁTIS
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 PAGAMENTO
+            ========================== -->
+
+            <div class="checkout-subsection">
+
+                <p class="checkout-label">
+                    03 / PAGAMENTO
+                </p>
+
+
+                <h2>
+                    FORMA DE PAGAMENTO
+                </h2>
+
+
+                <div class="payment-options">
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="pagamento"
+                            value="Pix"
+                        >
+
+                        <div>
+
+                            <strong>
+                                PIX
+                            </strong>
+
+                            <small>
+                                Pagamento instantâneo
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="pagamento"
+                            value="Cartão de crédito"
+                        >
+
+                        <div>
+
+                            <strong>
+                                CARTÃO DE CRÉDITO
+                            </strong>
+
+                            <small>
+                                Pagamento via cartão
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="pagamento"
+                            value="Cartão de débito"
+                        >
+
+                        <div>
+
+                            <strong>
+                                CARTÃO DE DÉBITO
+                            </strong>
+
+                            <small>
+                                Pagamento via cartão
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =========================
+             RESUMO DO PEDIDO
+        ========================== -->
+
+        <section class="checkout-box">
+
+            <p class="checkout-label">
+                04 / SEU PEDIDO
+            </p>
+
+
+            <h2>
+                RESUMO
+            </h2>
+
+
+            <div id="checkoutItems">
+
+                <!-- Produtos aparecem aqui -->
+
+            </div>
+
+
+
+            <div class="checkout-summary">
+
+
+                <div>
+
+                    <span>
+                        PRODUTOS
+                    </span>
+
+                    <strong id="subtotal">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+
+                <div>
+
+                    <span>
+                        FRETE
+                    </span>
+
+                    <strong id="freteValor">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="checkout-total">
+
+                <span>
+                    TOTAL
+                </span>
+
+                <strong id="checkoutTotal">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+
+            <button
+                class="checkout-button"
+                id="enviarPedido"
+                type="button"
+            >
+                ENVIAR PEDIDO PELO WHATSAPP →
+            </button>
+
+
+
+            <p
+                id="checkoutAviso"
+                class="checkout-aviso"
+            ></p>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+        VKS
+    </div>
+
+    <p>
+        © 2026 VKS. Todos os direitos reservados.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+// ===============================
+// CONFIGURAÇÃO
+// ===============================
+
+// COLOQUE AQUI O WHATSAPP DA VKS
+//
+// Exemplo:
+// 5547999999999
+//
+// Somente números.
+// Sem +, espaços ou hífen.
+
+const whatsapp =
+    "5547920037708";
+
+
+
+// ===============================
+// CARRINHO
+// ===============================
+
+let cart =
+    JSON.parse(
+        localStorage.getItem("vksCarrinho")
+    ) || [];
+
+
+
+// ===============================
+// ELEMENTOS
+// ===============================
+
+const checkoutItems =
+    document.getElementById(
+        "checkoutItems"
+    );
+
+
+const checkoutTotal =
+    document.getElementById(
+        "checkoutTotal"
+    );
+
+
+const subtotalElement =
+    document.getElementById(
+        "subtotal"
+    );
+
+
+const freteValor =
+    document.getElementById(
+        "freteValor"
+    );
+
+
+const enviarPedido =
+    document.getElementById(
+        "enviarPedido"
+    );
+
+
+const checkoutAviso =
+    document.getElementById(
+        "checkoutAviso"
+    );
+
+
+const cepInput =
+    document.getElementById(
+        "cep"
+    );
+
+
+const cepStatus =
+    document.getElementById(
+        "cepStatus"
+    );
+
+
+
+// ===============================
+// PREÇO
+// ===============================
+
+function money(value) {
+
+    return Number(value).toLocaleString(
+        "pt-BR",
+        {
+            style: "currency",
+            currency: "BRL"
+        }
+    );
+
+}
+
+
+
+// ===============================
+// FRETE
+// ===============================
+
+let freteSelecionado =
+    null;
+
+
+
+// ===============================
+// CALCULAR SUBTOTAL
+// ===============================
+
+function calcularSubtotal() {
+
+    return cart.reduce(
+        (total, produto) => {
+
+            const quantidade =
+                Number(produto.quantity) || 1;
+
+
+            return total +
+                Number(produto.price) *
+                quantidade;
+
+        },
+        0
+    );
+
+}
+
+
+
+// ===============================
+// ATUALIZAR TOTAL
+// ===============================
+
+function atualizarTotal() {
+
+    const subtotal =
+        calcularSubtotal();
+
+
+    const frete =
+        Number(freteSelecionado) || 0;
+
+
+    const total =
+        subtotal + frete;
+
+
+
+    if (subtotalElement) {
+
+        subtotalElement.textContent =
+            money(subtotal);
+
+    }
+
+
+
+    if (freteValor) {
+
+        freteValor.textContent =
+            frete === 0
+                ? "GRÁTIS"
+                : money(frete);
+
+    }
+
+
+
+    if (checkoutTotal) {
+
+        checkoutTotal.textContent =
+            money(total);
+
+    }
+
+}
+
+
+
+// ===============================
+// MOSTRAR PEDIDO
+// ===============================
+
+function mostrarPedido() {
+
+    if (!checkoutItems) return;
+
+
+
+    if (cart.length === 0) {
+
+        checkoutItems.innerHTML = `
+
+            <p class="checkout-vazio">
+                Seu carrinho está vazio.
+            </p>
+
+        `;
+
+
+        checkoutTotal.textContent =
+            "R$ 0,00";
+
+
+        enviarPedido.disabled =
+            true;
+
+
+        return;
+
+    }
+
+
+
+    checkoutItems.innerHTML =
+        cart.map(produto => {
+
+            const quantidade =
+                Number(produto.quantity) || 1;
+
+
+            const subtotal =
+                Number(produto.price) *
+                quantidade;
+
+
+
+            return `
+
+                <div class="checkout-item">
+
+                    <img
+                        src="${produto.image}"
+                        alt="${produto.name}"
+                    >
+
+
+                    <div
+                        class="checkout-item-info"
+                    >
+
+                        <strong>
+                            ${produto.name}
+                        </strong>
+
+
+                        <small>
+                            Tamanho:
+                            ${produto.size || "Único"}
+                        </small>
+
+
+                        <small>
+                            Quantidade:
+                            ${quantidade}
+                        </small>
+
+                    </div>
+
+
+                    <span>
+                        ${money(subtotal)}
+                    </span>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+    atualizarTotal();
+
+}
+
+
+
+mostrarPedido();
+
+
+
+// ===============================
+// SELECIONAR FRETE
+// ===============================
+
+document
+    .querySelectorAll(
+        'input[name="frete"]'
+    )
+    .forEach(opcao => {
+
+
+        opcao.addEventListener(
+            "change",
+            () => {
+
+                freteSelecionado =
+                    opcao.value;
+
+
+                atualizarTotal();
+
+            }
+        );
+
+    });
+
+
+
+// ===============================
+// MÁSCARA DO CEP
+// ===============================
+
+if (cepInput) {
+
+
+    cepInput.addEventListener(
+        "input",
+        () => {
+
+
+            let valor =
+                cepInput.value
+                    .replace(/\D/g, "")
+                    .slice(0, 8);
+
+
+
+            if (valor.length > 5) {
+
+                valor =
+                    valor.slice(0, 5)
+                    + "-"
+                    + valor.slice(5);
+
+            }
+
+
+
+            cepInput.value =
+                valor;
+
+
+
+            const cepLimpo =
+                valor.replace(
+                    /\D/g,
+                    ""
+                );
+
+
+
+            if (
+                cepLimpo.length === 8
+            ) {
+
+                buscarCEP(
+                    cepLimpo
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+
+// ===============================
+// BUSCAR CEP
+// ===============================
+
+async function buscarCEP(cep) {
+
+
+    if (cepStatus) {
+
+        cepStatus.textContent =
+            "Buscando endereço...";
+
+
+        cepStatus.style.display =
+            "block";
+
+    }
+
+
+
+    try {
+
+
+        const resposta =
+            await fetch(
+                `https://viacep.com.br/ws/${cep}/json/`
+            );
+
+
+
+        if (!resposta.ok) {
+
+            throw new Error(
+                "Erro ao consultar CEP"
+            );
+
+        }
+
+
+
+        const dados =
+            await resposta.json();
+
+
+
+        if (dados.erro) {
+
+            throw new Error(
+                "CEP não encontrado"
+            );
+
+        }
+
+
+
+        // ===============================
+        // PREENCHER CAMPOS
+        // ===============================
+
+        const cidade =
+            document.getElementById(
+                "cidade"
+            );
+
+
+        const estado =
+            document.getElementById(
+                "estado"
+            );
+
+
+        const endereco =
+            document.getElementById(
+                "endereco"
+            );
+
+
+
+        if (cidade) {
+
+            cidade.value =
+                dados.localidade || "";
+
+        }
+
+
+
+        if (estado) {
+
+            estado.value =
+                dados.uf || "";
+
+        }
+
+
+
+        if (endereco) {
+
+
+            let enderecoTexto =
+                dados.logradouro || "";
+
+
+
+            if (dados.bairro) {
+
+                enderecoTexto +=
+                    `, ${dados.bairro}`;
+
+            }
+
+
+
+            endereco.value =
+                enderecoTexto;
+
+        }
+
+
+
+        if (cepStatus) {
+
+            cepStatus.textContent =
+                "✓ Endereço encontrado";
+
+        }
+
+
+    } catch (erro) {
+
+
+        if (cepStatus) {
+
+            cepStatus.textContent =
+                "CEP não encontrado.";
+
+        }
+
+    }
+
+}
+
+
+
+// ===============================
+// ENVIAR PEDIDO
+// ===============================
+
+enviarPedido.addEventListener(
+    "click",
+    () => {
+
+
+        // ===============================
+        // DADOS
+        // ===============================
+
+        const nome =
+            document
+                .getElementById("nome")
+                .value
+                .trim();
+
+
+        const cep =
+            document
+                .getElementById("cep")
+                .value
+                .trim();
+
+
+        const cidade =
+            document
+                .getElementById("cidade")
+                .value
+                .trim();
+
+
+        const estado =
+            document
+                .getElementById("estado")
+                .value
+                .trim()
+                .toUpperCase();
+
+
+        const endereco =
+            document
+                .getElementById("endereco")
+                .value
+                .trim();
+
+
+
+        // ===============================
+        // OPÇÕES
+        // ===============================
+
+        const pagamento =
+            document.querySelector(
+                'input[name="pagamento"]:checked'
+            );
+
+
+        const frete =
+            document.querySelector(
+                'input[name="frete"]:checked'
+            );
+
+
+
+        // ===============================
+        // VALIDAÇÃO
+        // ===============================
+
+        if (
+            !nome ||
+            !cep ||
+            !cidade ||
+            !estado ||
+            !endereco
+        ) {
+
+            checkoutAviso.textContent =
+                "Preencha todos os seus dados.";
+
+            checkoutAviso.style.display =
+                "block";
+
+            return;
+
+        }
+
+
+
+        if (
+            cep.replace(/\D/g, "").length !== 8
+        ) {
+
+            checkoutAviso.textContent =
+                "Digite um CEP válido.";
+
+            checkoutAviso.style.display =
+                "block";
+
+            return;
+
+        }
+
+
+
+        if (!frete) {
+
+            checkoutAviso.textContent =
+                "Escolha uma forma de entrega.";
+
+            checkoutAviso.style.display =
+                "block";
+
+            return;
+
+        }
+
+
+
+        if (!pagamento) {
+
+            checkoutAviso.textContent =
+                "Escolha uma forma de pagamento.";
+
+            checkoutAviso.style.display =
+                "block";
+
+            return;
+
+        }
+
+
+
+        if (cart.length === 0) {
+
+            checkoutAviso.textContent =
+                "Seu carrinho está vazio.";
+
+            checkoutAviso.style.display =
+                "block";
+
+            return;
+
+        }
+
+
+
+        // ===============================
+        // VALORES
+        // ===============================
+
+        const subtotalProdutos =
+            calcularSubtotal();
+
+
+        const valorFrete =
+            Number(frete.value);
+
+
+        const total =
+            subtotalProdutos +
+            valorFrete;
+
+
+
+        // ===============================
+        // MONTAR MENSAGEM
+        // ===============================
+
+        let mensagem =
+            "🛍️ *NOVO PEDIDO — VKS*%0A%0A";
+
+
+
+        mensagem +=
+            "*CLIENTE*%0A";
+
+
+        mensagem +=
+            `Nome: ${nome}%0A`;
+
+
+        mensagem +=
+            `CEP: ${cep}%0A`;
+
+
+        mensagem +=
+            `Cidade: ${cidade} - ${estado}%0A`;
+
+
+        mensagem +=
+            `Endereço: ${endereco}%0A%0A`;
+
+
+
+        mensagem +=
+            "*PRODUTOS*%0A";
+
+
+
+        cart.forEach(produto => {
+
+
+            const quantidade =
+                Number(produto.quantity) || 1;
+
+
+            const subtotal =
+                Number(produto.price) *
+                quantidade;
+
+
+
+            mensagem +=
+                `• ${produto.name}%0A`;
+
+
+            mensagem +=
+                `  Tamanho: ${produto.size || "Único"}%0A`;
+
+
+            mensagem +=
+                `  Quantidade: ${quantidade}%0A`;
+
+
+            mensagem +=
+                `  Subtotal: ${money(subtotal)}%0A%0A`;
+
+        });
+
+
+
+        // ===============================
+        // ENTREGA
+        // ===============================
+
+        mensagem +=
+            "*ENTREGA*%0A";
+
+
+        mensagem +=
+            `Tipo: ${frete.dataset.name}%0A`;
+
+
+        mensagem +=
+            `Frete: ${
+                valorFrete === 0
+                    ? "GRÁTIS"
+                    : money(valorFrete)
+            }%0A%0A`;
+
+
+
+        // ===============================
+        // PAGAMENTO
+        // ===============================
+
+        mensagem +=
+            "*PAGAMENTO*%0A";
+
+
+        mensagem +=
+            `Forma: ${pagamento.value}%0A%0A`;
+
+
+
+        // ===============================
+        // TOTAL
+        // ===============================
+
+        mensagem +=
+            `*SUBTOTAL: ${money(
+                subtotalProdutos
+            )}*%0A`;
+
+
+        mensagem +=
+            `*FRETE: ${
+                valorFrete === 0
+                    ? "GRÁTIS"
+                    : money(valorFrete)
+            }*%0A`;
+
+
+        mensagem +=
+            `*TOTAL: ${money(
+                total
+            )}*%0A%0A`;
+
+
+        mensagem +=
+            "Aguardando confirmação do pedido. 🔥";
+
+
+
+        // ===============================
+        // WHATSAPP
+        // ===============================
+
+        const url =
+            `https://wa.me/${whatsapp}?text=${mensagem}`;
+
+
+        window.open(
+            url,
+            "_blank"
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
